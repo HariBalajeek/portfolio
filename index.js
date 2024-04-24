@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 
-mongoose.connect(process.env.MONGODB_ATLAS_URI, {
+mongoose.connect("mongodb+srv://freelancingthebest:hari0207@cluster0.tajayw2.mongodb.net/", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     bufferCommands: false
