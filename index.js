@@ -12,8 +12,7 @@ const port = process.env.PORT || 3000;
 
 mongoose.connect("mongodb+srv://freelancingthebest:hari0207@cluster0.tajayw2.mongodb.net/", {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    bufferCommands: false
+    useUnifiedTopology: true
 })
 .then(() => {
     console.log('Connected to MongoDB');
