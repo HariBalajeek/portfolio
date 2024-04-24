@@ -9,9 +9,10 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost:27017/yourdbname', {
+mongoose.connect(process.env.MONGODB_ATLAS_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    bufferCommands: false
 })
 .then(() => {
     console.log('Connected to MongoDB');
@@ -49,6 +50,6 @@ app.post('/', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server is running on port ${process.env.PORT || 3000}`);
 });
