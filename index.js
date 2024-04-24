@@ -9,6 +9,7 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+
 mongoose.connect(process.env.MONGODB_ATLAS_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
